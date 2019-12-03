@@ -1,37 +1,40 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import Page from './pages/Page'
-import Page2 from './pages/Page2'
-import HomePage from './pages/HomePage'
-import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
-    <Router>
-      <header>
-        <h1>Welcome to my SPA</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Go Home</Link>
-            </li>
-            <li>
-              <Link to="/1">Page 1</Link>
-            </li>
-            <li>
-              <Link to="/2">Page 2</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <Switch>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/1" component={Page}></Route>
-        <Route exact path="/2" component={Page2}></Route>
-        <Route path="*" component={NotFound}></Route>
-      </Switch>
-    </Router>
+    <>
+      <div className="calculator">
+
+        <input type="number" placeholder="0"></input>
+
+        <div class="calculator-buttons">
+          <button className="calc-button is-clear">C</button>
+          <button className="calc-button is-divide">&divide;</button>
+
+          <button className="calc-button">7</button>
+          <button className="calc-button">8</button>
+          <button className="calc-button">9</button>
+          <button className="calc-button is-times">&times;</button>
+
+          <button className="calc-button">4</button>
+          <button className="calc-button">5</button>
+          <button className="calc-button">6</button>
+          <button className="calc-button is-minus">&minus;</button>
+
+          <button className="calc-button">1</button>
+          <button className="calc-button">2</button>
+          <button className="calc-button">3</button>
+          <button className="calc-button is-plus">&#43;</button>
+
+
+          <button className="calc-button is-zero">0</button>
+          <button className="calc-button is-equals">&#61;</button>
+        </div>
+      </div>
+
+    </>
   )
 }
+
 
 export default App
